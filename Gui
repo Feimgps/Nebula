@@ -851,6 +851,22 @@ function library:Init(key)
     local title = library.title
     key = key or Enum.KeyCode.V
 
+    local UserInputService = game:GetService("UserInputService")
+local CoreGuiService = game:GetService("CoreGui")
+
+    local function isChatOpen()
+        local chatService = game:GetService("Chat")
+        return chatService.ChatBar.Enabled
+    end
+
+    UserInputService.InputBegan:Connect(function(input, gameProcessed)
+        if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == key and not isChatOpen() then
+
+        end
+    end)
+end
+
+
     local screen = Instance.new("ScreenGui")
     local edge = Instance.new("Frame")
     local edgeCorner = Instance.new("UICorner")
