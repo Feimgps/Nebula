@@ -23,7 +23,7 @@ textLabel.Font = Enum.Font.SourceSansBold
 textLabel.Parent = frame
 
 local sound = Instance.new("Sound")
-sound.SoundId = "rbxassetid://12345678" 
+sound.SoundId = "rbxassetid://190705984" 
 sound.Volume = 1
 sound.Looped = false
 sound.Parent = screenGui
@@ -33,5 +33,5 @@ wait(5)
 local player = game.Players.LocalPlayer
 
 if player then
-    player:Kick("Good try pooron 💀")
+    player:Kick("Good try pooron") 
 end
