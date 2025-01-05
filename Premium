@@ -1,4 +1,4 @@
--- at least u tried lmao
+-- at least u tried
 
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "PremiumWarningGui"
@@ -8,7 +8,7 @@ screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 local frame = Instance.new("Frame")
 frame.Size = UDim2.new(1, 0, 1, 0)
 frame.Position = UDim2.new(0, 0, 0, 0)
-frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- Nero
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 frame.BorderSizePixel = 0
 frame.Parent = screenGui
 
@@ -17,14 +17,21 @@ textLabel.Size = UDim2.new(0.8, 0, 0.2, 0)
 textLabel.Position = UDim2.new(0.1, 0, 0.4, 0)
 textLabel.BackgroundTransparency = 1
 textLabel.Text = "Bro tried using Premium without paying 😹"
-textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255) 
 textLabel.TextScaled = true
 textLabel.Font = Enum.Font.SourceSansBold
 textLabel.Parent = frame
 
 local sound = Instance.new("Sound")
-sound.SoundId = "rbxassetid://190705984" 
+sound.SoundId = "rbxassetid://12345678" 
 sound.Volume = 1
 sound.Looped = false
 sound.Parent = screenGui
 sound:Play()
+
+wait(5)
+local player = game.Players.LocalPlayer
+
+if player then
+    player:Kick("Good try pooron 💀")
+end
